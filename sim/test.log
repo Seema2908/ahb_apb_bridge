@@ -1,0 +1,372 @@
+# vsim -cvgperinstance -vopt -voptargs="+acc" -coverage -sva -c -do " log -r /* ; coverage save -onexit coverage; run -all; exit" -wlf wave_file1.wlf -l test.log -sv_seed random work.ahb_apb_top "+UVM_TESTNAME=ahb_apb_test" 
+# Start time: 12:04:27 on Dec 30,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "apb_controller(fast)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "ahb(fast)".
+# //  Questa Sim-64
+# //  Version 2019.2 linux_x86_64 Apr 16 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.ahb_if(fast)
+# Loading work.apb_if(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.ahb_apb_test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.ahb_apb_top(fast)
+# Loading work.ahb_if(fast)
+# Loading work.apb_if(fast)
+# Loading work.rtl_top(fast)
+# Loading work.ahb(fast)
+# Loading work.apb_controller(fast)
+# Loading work.apb(fast)
+# Loading /home/cad/eda/Questa_2019/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# Sv_Seed = 3660821981
+#  log -r /* 
+#  coverage save -onexit coverage
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test ahb_apb_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------
+# Name                       Type                        Size  Value
+# ------------------------------------------------------------------
+# uvm_test_top               ahb_apb_test                -     @479 
+#   env                      ahb_apb_env                 -     @491 
+#     ahb_agenth             ahb_agent                   -     @507 
+#       drvh                 ahb_driver                  -     @549 
+#         rsp_port           uvm_analysis_port           -     @564 
+#         seq_item_port      uvm_seq_item_pull_port      -     @556 
+#       monh                 ahb_monitor                 -     @534 
+#         ap                 uvm_analysis_port           -     @541 
+#       seqrh                ahb_sequencer               -     @572 
+#         rsp_export         uvm_analysis_export         -     @579 
+#         seq_item_export    uvm_seq_item_pull_imp       -     @673 
+#         arbitration_queue  array                       0     -    
+#         lock_queue         array                       0     -    
+#         num_last_reqs      integral                    32    'd1  
+#         num_last_rsps      integral                    32    'd1  
+#     apb_agenth             apb_agent                   -     @518 
+#       drvh                 apb_driver                  -     @705 
+#         rsp_port           uvm_analysis_port           -     @720 
+#         seq_item_port      uvm_seq_item_pull_port      -     @712 
+#       monh                 apb_monitor                 -     @690 
+#         ap                 uvm_analysis_port           -     @697 
+#       seqrh                apb_sequencer               -     @728 
+#         rsp_export         uvm_analysis_export         -     @735 
+#         seq_item_export    uvm_seq_item_pull_imp       -     @829 
+#         arbitration_queue  array                       0     -    
+#         lock_queue         array                       0     -    
+#         num_last_reqs      integral                    32    'd1  
+#         num_last_rsps      integral                    32    'd1  
+#     sb                     ahb_apb_scoreboard          -     @525 
+#       ahb_fifo             uvm_tlm_analysis_fifo #(T)  -     @845 
+#         analysis_export    uvm_analysis_imp            -     @884 
+#         get_ap             uvm_analysis_port           -     @876 
+#         get_peek_export    uvm_get_peek_imp            -     @860 
+#         put_ap             uvm_analysis_port           -     @868 
+#         put_export         uvm_put_imp                 -     @852 
+#       apb_fifo             uvm_tlm_analysis_fifo #(T)  -     @892 
+#         analysis_export    uvm_analysis_imp            -     @931 
+#         get_ap             uvm_analysis_port           -     @923 
+#         get_peek_export    uvm_get_peek_imp            -     @907 
+#         put_ap             uvm_analysis_port           -     @915 
+#         put_export         uvm_put_imp                 -     @899 
+# ------------------------------------------------------------------
+# 
+# inside DEFAULT state               10000
+# haddr = 10000000000000000000001001000100, hsize = 001, hburst = 111, hwrite = 1
+# Width = 32, size 8 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @956 
+# -----------------------------
+# size of the queue =           1
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1017
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1012
+# -----------------------------
+# Address comparision successful
+# Haddr = 80000244, Paddr =80000244
+# Data comparision successful
+# HWDATA/HRDATA = 00009382, PWDATA/PRDATA =00009382
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1021
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1025
+# -----------------------------
+# Address comparision successful
+# Haddr = 80000246, Paddr =80000246
+# Data comparision successful
+# HWDATA/HRDATA = 0000f116, PWDATA/PRDATA =0000f116
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1029
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1033
+# -----------------------------
+# Address comparision successful
+# Haddr = 80000248, Paddr =80000248
+# Data comparision successful
+# HWDATA/HRDATA = 0000994d, PWDATA/PRDATA =0000994d
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1037
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1041
+# -----------------------------
+# Address comparision successful
+# Haddr = 8000024a, Paddr =8000024a
+# Data comparision successful
+# HWDATA/HRDATA = 00004715, PWDATA/PRDATA =00004715
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1045
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1049
+# -----------------------------
+# Address comparision successful
+# Haddr = 8000024c, Paddr =8000024c
+# Data comparision successful
+# HWDATA/HRDATA = 0000f94b, PWDATA/PRDATA =0000f94b
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1053
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1057
+# -----------------------------
+# Address comparision successful
+# Haddr = 8000024e, Paddr =8000024e
+# Data comparision successful
+# HWDATA/HRDATA = 00005d2b, PWDATA/PRDATA =00005d2b
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1061
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1065
+# -----------------------------
+# Address comparision successful
+# Haddr = 80000250, Paddr =80000250
+# Data comparision successful
+# HWDATA/HRDATA = 0000e8b4, PWDATA/PRDATA =0000e8b4
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1069
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1073
+# -----------------------------
+# Address comparision successful
+# Haddr = 80000252, Paddr =80000252
+# Data comparision successful
+# HWDATA/HRDATA = 0000b4e8, PWDATA/PRDATA =0000b4e8
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1077
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1081
+# -----------------------------
+# Address comparision successful
+# Haddr = 80000254, Paddr =80000254
+# Data comparision successful
+# HWDATA/HRDATA = 0000c49d, PWDATA/PRDATA =0000c49d
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1085
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1089
+# -----------------------------
+# Address comparision successful
+# Haddr = 80000256, Paddr =80000256
+# Data comparision successful
+# HWDATA/HRDATA = 00006625, PWDATA/PRDATA =00006625
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1093
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1097
+# -----------------------------
+# Address comparision successful
+# Haddr = 80000258, Paddr =80000258
+# Data comparision successful
+# HWDATA/HRDATA = 0000c8c7, PWDATA/PRDATA =0000c8c7
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1101
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1105
+# -----------------------------
+# Address comparision successful
+# Haddr = 8000025a, Paddr =8000025a
+# Data comparision successful
+# HWDATA/HRDATA = 0000daa5, PWDATA/PRDATA =0000daa5
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1109
+# -----------------------------
+# size of the queue =           2
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1113
+# -----------------------------
+# Address comparision successful
+# Haddr = 8000025c, Paddr =8000025c
+# Data comparision successful
+# HWDATA/HRDATA = 0000f82f, PWDATA/PRDATA =0000f82f
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1117
+# -----------------------------
+# size of the queue =           2
+# ----------------------------
+# Name  Type       Size  Value
+# ----------------------------
+# req   apb_trans  -     @1130
+# ----------------------------
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  apb_trans  -     @1121
+# -----------------------------
+# Address comparision successful
+# Haddr = 8000025e, Paddr =8000025e
+# Data comparision successful
+# HWDATA/HRDATA = 0000d142, PWDATA/PRDATA =0000d142
+# Width = 32, size 16 bits
+# -----------------------------
+# Name   Type       Size  Value
+# -----------------------------
+# trans  ahb_trans  -     @1125
+# -----------------------------
+# size of the queue =           2
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 690000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    5
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : /home/cad/eda/Questa_2019/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 690 ns  Iteration: 65  Instance: /ahb_apb_top
+# Saving coverage database on exit...
+# End time: 12:04:30 on Dec 30,2022, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 1
